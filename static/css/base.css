@@ -51,7 +51,7 @@ header h1 a {
 .button-link {
     display: inline-block; /* Ensures the link behaves like a button */
     padding: 10px 20px; /* Adds padding around the text */
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     margin-right: 10px;
     background-color: blue; /* Sets the background color */
     color: white; /* Sets the text color */

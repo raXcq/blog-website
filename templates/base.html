@@ -2,23 +2,33 @@
 <html>
 
 <head>
-    <title>Django blog</title>
+    <title>CRUD blog</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="nav-left">
-            <h1><a href="{% url 'home' %}">Django blog</a></h1>
-        </div>
-        <div class="nav-right">
-            <a class="button-link" href="{% url 'post_new' %}">+ New Blog Post</a>
-            <a class="button-link" href="{% url 'home' %}">Home</a>
-        </div>
-    </header>
-
     <div>
+        <header>
+            <div class="nav-left">
+                <h1><a href="{% url 'home' %}">A Broken Codes Production</a></h1>
+            </div>
+            <div class="nav-right">
+                {% if user.is_authenticated %}
+                <p class="button-link">Hi {{ user.username }}</p>
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="button-link">Logout</button>
+                </form>
+                {% else %}
+                <a href="{% url 'login' %}" class="button-link">Login</a>
+                <a href="{% url 'signup' %}" class="button-link">Signup</a>
+                <p>You are not Logged in.</p>
+                {% endif %}
+                <a class="button-link" href="{% url 'post_new' %}">+ New Blog Post</a>
+                <a class="button-link" href="{% url 'home' %}">Home</a>
+            </div>
+        </header>
         {% block content %}
         {% endblock content %}
     </div>
