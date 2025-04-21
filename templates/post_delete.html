@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="post-delete">
+    <h1>Delete Post</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Are you sure you want to delete post "{{ post.title }}"?</p>
+        <input type="submit" value= "Confirm" class="button-link">
+        <a href="{% url 'post_detail' post.pk %}" class="button-link">Cancel</a>
+    </form>
+
+    {% endblock %}

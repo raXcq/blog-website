@@ -23,6 +23,12 @@ header h1 a {
     padding-top: 2rem;
 }
 
+.nav-right a {
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: white;
+}
 .post-entry {
     margin-bottom: 2rem;
 }
@@ -30,7 +36,7 @@ header h1 a {
     margin: 0.5rem 0;
 }
 .post-entry h2 a, .post-entry h2 a:visited {
-    color: blue;
+    color: green;
     text-decoration: none;
 }
 .post-entry p {
@@ -40,4 +46,20 @@ header h1 a {
 
 .post-entry h2 a:hover{
     color: red;
+}
+
+.button-link {
+    display: inline-block; /* Ensures the link behaves like a button */
+    padding: 10px 20px; /* Adds padding around the text */
+    margin-bottom: 20px;
+    margin-right: 10px;
+    background-color: blue; /* Sets the background color */
+    color: white; /* Sets the text color */
+    text-decoration: none; /* Removes the underline */
+    border-radius: 10px; /* Adds rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+.button-link:hover {
+    background-color: green; /* Changes background color on hover */
 }
