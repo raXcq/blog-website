@@ -48,7 +48,7 @@ header h1 a {
     color: red;
 }
 
-.button-link {
+button, .button-link {
     display: inline-block; /* Ensures the link behaves like a button */
     padding: 10px 20px; /* Adds padding around the text */
     margin-bottom: 50px;
@@ -60,6 +60,6 @@ header h1 a {
     cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
-.button-link:hover {
+button, .button-link:hover {
     background-color: green; /* Changes background color on hover */
 }
